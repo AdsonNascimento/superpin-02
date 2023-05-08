@@ -1,0 +1,100 @@
+#projetos .content-align {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-align h2 {
+  font-size: calc(1.5rem + 1vw);
+  color: rgb(56, 56, 56);
+  margin-bottom: 4rem;
+}
+
+.content-align p {
+  font-size: calc(.75rem + .4vw);
+  font-weight: 600;
+  color: rgb(116, 116, 116);
+}
+
+#wrapper {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+#carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: block;
+  justify-content: center;
+  align-content: center;
+  background: rgba(255, 255, 255, .5);
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+#next {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+#content {
+  display: flex;
+  gap: 30px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+#wrapper .item {
+  min-width: 300px;
+}
+
+#wrapper .item:hover h5,
+#wrapper .item:hover span {
+  color: var(--blue-2);
+}
+
+#wrapper .item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 15px;
+}
+
+#wrapper .item h5 {
+  color: var(--blue-dark);
+  font-size: 2rem;
+  margin: 15px 0 5px 0;
+}
+
+#wrapper .item span {
+  color: var(#9499a3);
+  font-size: 1.5rem;
+  transition: .3s;
+}
+
+@media screen and (max-width: 500px) {
+  #prev,
+  #next {
+    display: none;
+  }
+}
